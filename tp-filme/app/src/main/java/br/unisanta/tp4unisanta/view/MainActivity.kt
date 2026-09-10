@@ -23,8 +23,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         val btnAdicionar = findViewById<Button>(R.id.btn_adicionar)
         rvFilmes = findViewById(R.id.rv_filmes)
 
-        // Aqui é o ponto pedido pelo TP: layout em GRID com 2 colunas.
-        // Se quiser lista simples, troque por: LinearLayoutManager(this)
         rvFilmes.layoutManager = GridLayoutManager(this, 2)
         rvFilmes.adapter = FilmeAdapter(FilmeDao.buscar())
 
